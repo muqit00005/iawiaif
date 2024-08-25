@@ -144,7 +144,7 @@
                 </div>
                 <div class="fotsub">
                     <h3>Newsletter</h3>
-                    <form method="POST" name="emailform" onsubmit="validateform()">
+                    <form onsubmit="sendsubemail(); reset(); return false;" method="POST">
                         <input type="email" id="email" class="email" name="email" required><button>Subscribe</button>
                     </form>
                     <div class="social-links">
@@ -159,16 +159,12 @@
                 Copyright 2024© | All Right Reserved | I AM WHO I AM FOUNDATION
             </div>
         </footer>
-        <script>
-            function validateform(){
-                let email = document.forms["emailform"]["email"].value
-                if (email != null){
-                    alert("Your Email Address Has Been Added Successfuly!!!")
-                }
-            };
-        </script>
         <!--scroll reveal-->
         <script src="https://unpkg.com/scrollreveal"></script>
+                <!--email code-->
+                <script src="https://smtpjs.com/v3/smtp.js"></script>
+                <!--sweet alert-->
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
             const boxpopup = document.querySelector('nav #moreoptions #show');
             const boxclose = document.querySelector('nav #moreoptions #hide');
@@ -176,6 +172,8 @@
             const form = document.querySelector('nav .search form');
             const btn = document.querySelector('nav .search form button');
             const searchvalue = document.querySelector('nav .search form input');
+            const subform = document.querySelector('footer .footer2 .fotsub form');
+            const subemailaddress = document.querySelector('footer .footer2 .fotsub form input');
             
             btn.addEventListener('click',()=>{
 
@@ -224,6 +222,33 @@
             ScrollReveal().reveal('.team', { origin: 'bottom' });
             ScrollReveal().reveal('footer', { origin: 'bottom' });
             ScrollReveal().reveal('header', { origin: 'top' });
+
+            //smtp for email address
+            function sendsubemail(){
+                const bodyMessage = 'Email Address: '+subemailaddress.value;
+                Email.send({
+                    SecureToken :"9a2ca135-717e-445b-a89a-1a5f30fae743",
+                    To : 'muqit00005@gmail.com',
+                    From : 'muqit00005@gmail.com',
+                    Subject : "New Email Subscriber",
+                    Body : bodyMessage
+                }).then(
+                    message => {
+                        if (message == "OK"){
+                            //sweetalert2
+                            Swal.fire({
+                            title: "Email Added!",
+                            text: "Your email address has been added sucessfully!",
+                            icon: "success"
+                            });
+                        }
+                    }
+                );
+            }
+            subform.addEventListener("submit",(e)=>{
+                e.preventDefault();
+                sendsubemail()
+            });
         </script>
     </body>
 </html>
