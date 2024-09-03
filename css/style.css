@@ -1189,6 +1189,19 @@ form .message{
     font-size:15px;
     line-height:2;
 }
+.comesoon{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding:300px 0;
+}
+.comesoon p{
+    text-align:center;
+    font-size:70px;
+    font-weight:bolder;
+    color:rgb(0, 0, 24);
+}
 @media screen and (max-width:1100px){
     nav .search{
         width:70%;
