@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            Media I Am Who I Am Intercessors Foundation
+             Gallery I Am Who I Am Intercessors Foundation
         </title>
         <link rel="icon" href="logo.ico">
          <meta charset="utf-8">
@@ -66,53 +66,67 @@
                 </div>
             </div>
         </nav>
-        <header style="background-image:linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url('img/mediaimg.jpeg');">
+        <header style="background-image:linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url('img/galleryimg.jpeg');">
             <h1>
-                Media
+                Gallery
             </h1>
         </header>
-        <!--
-        <section class="medias">
-            <i class="bi bi-newspaper"></i>
-            <h1>News</h1>
-            <img src="img/newsimg.jpeg" width="500" height="400">
-            <p>
-                I Am Who I Am Foundaiton consectetur adipisicing elit. Similique, repellendus. Rerum comodi iure sequi quia
-                exercitationem voluptate porro fugit. Repellat, quos! Quisquam sed nihil ratione libero quo! Minusconsequatur nisi
-                expedita sed rerum suscipit natus non? Tenetur laudantium quos error minus ducimus aliquid, facilis cumque dolores
-                libero officia fugiat voluptatibus provident consectetur id a in, deleniti perferendis nulla sed illo nobis eius.
-            </p>
-            <a href="news.html">More News</a>
+        <section class="vid-sec">
+            <h1>VIDEOS</h1>
+            <video width="100%"height="500" controls>
+                <source src="vid/aboutiamwhoiam.mp4" type="video/mp4">
+            </video>
         </section>
-        <section class="medias">
-            <i class="bi bi-calendar-event-fill"></i>
-            <h1>Events</h1>
-            <img src="img/eventimg.jpeg" width="500" height="400">
-            <p>
-                I Am Who I Am Foundaiton consectetur adipisicing elit. Similique, repellendus. Rerum comodi iure sequi quia
-                exercitationem voluptate porro fugit. Repellat, quos! Quisquam sed nihil ratione libero quo! Minusconsequatur nisi
-                expedita sed rerum suscipit natus non? Tenetur laudantium quos error minus ducimus aliquid, facilis cumque dolores
-                libero officia fugiat voluptatibus provident consectetur id a in, deleniti perferendis nulla sed illo nobis eius.
-            </p>
-            <a href="events.html">More Events</a>
+        <section class="vid-sec" style="margin-bottom:30px;">
+            <video width="100%"height="500" controls>
+                <source src="vid/widowvisit.mp4" type="video/mp4">
+            </video>
         </section>
-        <section class="medias">
-            <i class="bi bi-card-image"></i>
-            <h1>Gallery</h1>
-            <img src="img/galleryimg.jpeg" width="500" height="400">
-            <p>
-                I Am Who I Am Foundaiton consectetur adipisicing elit. Similique, repellendus. Rerum comodi iure sequi quia
-                exercitationem voluptate porro fugit. Repellat, quos! Quisquam sed nihil ratione libero quo! Minusconsequatur nisi
-                expedita sed rerum suscipit natus non? Tenetur laudantium quos error minus ducimus aliquid, facilis cumque dolores
-                libero officia fugiat voluptatibus provident consectetur id a in, deleniti perferendis nulla sed illo nobis eius.
-            </p>
-            <a href="gallery.html">Veiw More Photos</a>
+        <section class="vid-sec" style="margin-bottom:30px;">
+            <video width="100%"height="500" controls>
+                <source src="vid/widow.mp4" type="video/mp4">
+            </video>
         </section>
-        -->
-        <section class="comesoon">
-            <p>
-                Coming Soon...
-            </p>
+        <section class="vid-sec" style="margin-bottom:30px;">
+            <video width="100%"height="500" controls>
+                <source src="vid/prison.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section class="vid-sec" style="margin-bottom:30px;">
+            <video width="100%"height="500" controls>
+                <source src="vid/widowwalk.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section class="photo-sec">
+            <h1>PHOTOS</h1>
+            <div class="photogal">
+                <div class="imgg">
+                    <img src="img/widow1.jpg" width="300" height="300">
+                </div>
+                <div class="imgg">
+                    <img src="img/widow2.jpg" width="300" height="300">
+                </div>
+                <div class="imgg">
+                    <img src="img/widow4.jpg" width="300" height="300">
+                </div>
+                <div class="imgg">
+                    <img src="img/widow3.jpg" width="300" height="300">
+                </div>
+            </div>
+            <div class="photogal">
+                <div class="imgg">
+                    <img src="img/prison4.jpg" width="300" height="300">
+                </div>
+                <div class="imgg">
+                    <img src="img/prison2.jpg" width="300" height="300">
+                </div>
+                <div class="imgg">
+                    <img src="img/prison3.jpg" width="300" height="300">
+                </div>
+                <div class="imgg">
+                    <img src="img/prison1.jpg" width="300" height="300">
+                </div>
+            </div>
         </section>
         <footer>
             <h1>I AM WHO I AM FOUNDATION</h1>
@@ -223,9 +237,11 @@
                 duration: 2000,
                 delay: 200 
             });
-            ScrollReveal().reveal('.medias', { origin: 'bottom' });
+            ScrollReveal().reveal('.vid-sec', { origin: 'bottom' });
+            ScrollReveal().reveal('.photo-sec', { origin: 'bottom' });
             ScrollReveal().reveal('footer', { origin: 'bottom' });
             ScrollReveal().reveal('header', { origin: 'top' });
+
             //smtp for email address
             function sendsubemail(){
                 const bodyMessage = 'Email Address: '+subemailaddress.value;
