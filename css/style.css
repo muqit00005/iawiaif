@@ -1110,6 +1110,14 @@ form .message{
     border-bottom:1px solid rgb(0, 0, 24);
     gap:20px;
 }
+.teamimg{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:50px;
+    flex-direction:column;
+    width:100%;
+}
 .namebox{
     display:flex;
     justify-content:center;
@@ -1156,6 +1164,9 @@ form .message{
     border:1px solid #000;
     overflow:hidden;
     box-shadow:0 0 10px #000;
+}
+.newscard img{
+    padding:0 10px;
 }
 .newscard h1{
     font-size:17px;
